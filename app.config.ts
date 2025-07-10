@@ -1,0 +1,277 @@
+export default defineAppConfig({
+  ui: {
+    chip: {
+      slots: {
+        root: 'relative inline-flex items-center justify-center shrink-0',
+        base: 'rounded-full ring ring-dawnPink flex items-center justify-center text-inverted font-medium whitespace-nowrap'
+      },
+      variants: {
+        color: {
+          primary: 'bg-primary',
+          secondary: 'bg-secondary',
+          success: 'bg-success',
+          info: 'bg-info',
+          warning: 'bg-warning',
+          error: 'bg-error',
+          neutral: 'bg-inverted'
+        },
+      },
+      defaultVariants: {
+        size: 'sm',
+        color: 'primary',
+        position: 'bottom-right',
+        inset: true,
+      },
+      compoundVariants: [
+        {
+          color: 'info',
+          variant: 'solid',
+          class: 'bg-avocado'
+        },
+      ],
+    },
+    badge: {
+      slots: {
+        base: 'font-medium inline-flex items-center',
+        label: 'truncate',
+        leadingIcon: 'shrink-0',
+        leadingAvatar: 'shrink-0',
+        leadingAvatarSize: '',
+        trailingIcon: 'shrink-0'
+      },
+      compoundVariants: [
+        {
+          color: 'primary',
+          variant: 'solid',
+          class: 'bg-primary text-white hover:bg-primary-500 active:bg-primary-500 disabled:bg-primary aria-disabled:bg-primary'
+        },
+        {
+          color: 'secondary',
+          variant: 'solid',
+          class: 'bg-secondary text-dawnPink hover:bg-stromboli-500 active:bg-secondary-500 disabled:bg-primary aria-disabled:bg-primary'
+        },
+        {
+          color: 'neutral',
+          variant: 'solid',
+          class: 'bg-dawnPink text-inverted hover:bg-dawnPink/75 active:bg-dawnPink/90 disabled:bg-dawnPink aria-disabled:bg-dawnPink'
+        },
+        {
+          color: 'info',
+          variant: 'solid',
+          class: 'bg-avocado text-dawnPnk hover:bg-dawnPink/75 active:bg-dawnPink/90 disabled:bg-dawnPink aria-disabled:bg-dawnPink'
+        }
+      ]
+    },
+    button: {
+      slots: {
+        base: [
+          'rounded-lg font-medium text-base inline-flex items-center disabled:opacity-75 aria-disabled:opacity-75',
+          'transition-colors'
+        ],
+        label: 'truncate',
+        leadingIcon: 'shrink-0',
+        leadingAvatar: 'shrink-0',
+        leadingAvatarSize: '',
+        trailingIcon: 'shrink-0'
+      },
+      variants: {
+        buttonGroup: {
+          horizontal: 'not-only:first:rounded-e-none not-only:last:rounded-s-none not-last:not-first:rounded-none focus-visible:z-[1]',
+          vertical: 'not-only:first:rounded-b-none not-only:last:rounded-t-none not-last:not-first:rounded-none focus-visible:z-[1]'
+        },
+        color: {
+          primary: '',
+          secondary: '',
+          success: '',
+          info: '',
+          warning: '',
+          error: '',
+          neutral: ''
+        },
+        variant: {
+          solid: '',
+          outline: '',
+          soft: '',
+          subtle: '',
+          ghost: '',
+          link: ''
+        },
+        size: {
+          xs: {
+            base: 'px-2 py-1 text-xs gap-1',
+            leadingIcon: 'size-4',
+            leadingAvatarSize: '3xs',
+            trailingIcon: 'size-4'
+          },
+          sm: {
+            base: 'px-2.5 py-1.5 text-xs gap-1.5',
+            leadingIcon: 'size-4',
+            leadingAvatarSize: '3xs',
+            trailingIcon: 'size-4'
+          },
+          md: {
+            base: 'px-2.5 py-1.5 text-sm gap-1.5',
+            leadingIcon: 'size-5',
+            leadingAvatarSize: '2xs',
+            trailingIcon: 'size-5'
+          },
+          lg: {
+            base: 'px-3 py-2 text-sm gap-2',
+            leadingIcon: 'size-5',
+            leadingAvatarSize: '2xs',
+            trailingIcon: 'size-5'
+          },
+          xl: {
+            base: 'px-3 py-2 text-base gap-2',
+            leadingIcon: 'size-6',
+            leadingAvatarSize: 'xs',
+            trailingIcon: 'size-6'
+          }
+        },
+        block: {
+          true: {
+            base: 'w-full justify-center',
+            trailingIcon: 'ms-auto'
+          }
+        },
+        square: {
+          true: ''
+        },
+        leading: {
+          true: ''
+        },
+        trailing: {
+          true: ''
+        },
+        loading: {
+          true: ''
+        },
+        active: {
+          true: {
+            base: ''
+          },
+          false: {
+            base: ''
+          }
+        }
+      },
+      compoundVariants: [
+        {
+          color: 'primary',
+          variant: 'solid',
+          class: 'text-dawnPink bg-primary hover:bg-primary-500 active:bg-primary-500 disabled:bg-primary aria-disabled:bg-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary'
+        },
+        {
+          color: 'secondary',
+          variant: 'solid',
+          class: 'text-dawnPink bg-secondary hover:bg-stromboli-500 active:bg-secondary-500 disabled:bg-primary aria-disabled:bg-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary'
+        },
+        {
+          color: 'primary',
+          variant: 'outline',
+          class: 'ring ring-inset ring-primary text-primary hover:bg-primary-50 active:bg-primary/10 disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent focus:outline-none focus-visible:ring-2 focus-visible:ring-primary'
+        },
+        {
+          color: 'primary',
+          variant: 'soft',
+          class: 'text-primary bg-primary/10 hover:bg-primary/15 active:bg-primary/15 focus:outline-none focus-visible:bg-primary/15 disabled:bg-primary/10 aria-disabled:bg-primary/10'
+        },
+        {
+          color: 'primary',
+          variant: 'subtle',
+          class: 'text-primary ring ring-inset ring-primary/25 bg-primary/10 hover:bg-primary/15 active:bg-primary/15 disabled:bg-primary/10 aria-disabled:bg-primary/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary'
+        },
+        {
+          color: 'primary',
+          variant: 'ghost',
+          class: 'text-primary hover:bg-primary/10 active:bg-primary/10 focus:outline-none focus-visible:bg-primary/10 disabled:bg-transparent aria-disabled:bg-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent'
+        },
+        {
+          color: 'primary',
+          variant: 'link',
+          class: 'text-primary underline hover:text-primary/75 active:text-primary/75 disabled:text-primary aria-disabled:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary'
+        },
+        {
+          color: 'secondary',
+          variant: 'link',
+          class: 'text-secondary underline hover:text-secondary/75 active:text-secondary/75 disabled:text-primary aria-disabled:text-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary'
+        },
+        {
+          color: 'neutral',
+          variant: 'solid',
+          class: 'text-inverted bg-dawnPink hover:bg-dawnPink/75 active:bg-dawnPink/90 disabled:bg-dawnPink aria-disabled:bg-dawnPink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dawnPink'
+        },
+        {
+          color: 'neutral',
+          variant: 'outline',
+          class: 'ring ring-inset ring-accented text-default bg-default hover:bg-elevated active:bg-elevated disabled:bg-default aria-disabled:bg-default focus:outline-none focus-visible:ring-2 focus-visible:ring-inverted'
+        },
+        {
+          color: 'neutral',
+          variant: 'soft',
+          class: 'text-secondary bg-dawnPink hover:bg-dawnPink/75 active:bg-dawnPink/75 focus:outline-none focus-visible:bg-accented/75 disabled:bg-elevated aria-disabled:bg-elevated'
+        },
+        {
+          color: 'neutral',
+          variant: 'subtle',
+          class: 'text-dawnPink ring ring-inset ring-dawnPink bg-transparent hover:text-secondary hover:bg-dawnPink/75 active:bg-dawnPink/75 disabled:bg-dawnPink aria-disabled:bg-dawnPink focus:outline-none focus-visible:ring-2 focus-visible:ring-inverted'
+        },
+        {
+          color: 'neutral',
+          variant: 'ghost',
+          class: 'text-default hover:bg-elevated active:bg-elevated focus:outline-none focus-visible:bg-elevated hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent'
+        },
+        {
+          color: 'neutral',
+          variant: 'link',
+          class: 'text-eaver underline hover:text-beaver focus:outline-none focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-inverted'
+        },
+        {
+          size: 'xs',
+          square: true,
+          class: 'p-1'
+        },
+        {
+          size: 'sm',
+          square: true,
+          class: 'p-1.5'
+        },
+        {
+          size: 'md',
+          square: true,
+          class: 'p-1.5'
+        },
+        {
+          size: 'lg',
+          square: true,
+          class: 'p-2'
+        },
+        {
+          size: 'xl',
+          square: true,
+          class: 'p-2'
+        },
+        {
+          loading: true,
+          leading: true,
+          class: {
+            leadingIcon: 'animate-spin'
+          }
+        },
+        {
+          loading: true,
+          leading: false,
+          trailing: true,
+          class: {
+            trailingIcon: 'animate-spin'
+          }
+        }
+      ],
+      defaultVariants: {
+        color: 'primary',
+        variant: 'solid',
+        size: 'md'
+      }
+    }
+  }
+})

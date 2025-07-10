@@ -4,47 +4,48 @@
 
 @layer base {
   html {
-    font-family: 'Inter', system-ui, sans-serif;
+    font: 1em 'Poppins', sans-serif;
   }
   
   :root {
-    --ui-primary: #838c68;
-    --ui-primary-50: #f6f7f4;
-    --ui-primary-100: #e9ebe4;
-    --ui-primary-200: #d3d8ca;
-    --ui-primary-300: #b5bda7;
-    --ui-primary-400: #838c68;
-    --ui-primary-500: #6b7455;
-    --ui-primary-600: #555c45;
-    --ui-primary-700: #464a3a;
-    --ui-primary-800: #3a3e32;
-    --ui-primary-900: #33352c;
-    --ui-primary-950: #1a1c15;
+    /* Primary (Stromboli) */
+    --ui-primary: #b34b23;
+    --ui-primary-50: #fef6f3;
+    --ui-primary-100: #fdeae4;
+    --ui-primary-200: #fad1c3;
+    --ui-primary-300: #f5b194;
+    --ui-primary-400: #b34b23;
+    --ui-primary-500: #a03d1c;
+    --ui-primary-600: #8a3218;
+    --ui-primary-700: #722916;
+    --ui-primary-800: #5e2316;
+    --ui-primary-900: #4f2017;
+    --ui-primary-950: #2b0e08;
     
-    --ui-secondary: #b34b23;
-    --ui-secondary-50: #fef6f3;
-    --ui-secondary-100: #fdeae4;
-    --ui-secondary-200: #fad1c3;
-    --ui-secondary-300: #f5b194;
-    --ui-secondary-400: #b34b23;
-    --ui-secondary-500: #a03d1c;
-    --ui-secondary-600: #8a3218;
-    --ui-secondary-700: #722916;
-    --ui-secondary-800: #5e2316;
-    --ui-secondary-900: #4f2017;
-    --ui-secondary-950: #2b0e08;
+    /* Secondary (Desert) */
+    --ui-secondary: #365d4a;
+    --ui-secondary-50: #f4f7f5;
+    --ui-secondary-100: #e6ede8;
+    --ui-secondary-200: #cddbd2;
+    --ui-secondary-300: #a8bfb1;
+    --ui-secondary-400: #365d4a;
+    --ui-secondary-500: #2c4d3c;
+    --ui-secondary-600: #243e30;
+    --ui-secondary-700: #1f3228;
+    --ui-secondary-800: #1a2921;
+    --ui-secondary-900: #17241e;
+    --ui-secondary-950: #0c130f;
   }
 }
 
+@theme {
+  --color-avocado: #838c68;  /* Avocado */
+  --color-beaver: #a58373;  /* Beaver */
+  --color-saddle: #503021;    /* Saddle */
+  --color-dawnPink: #f0e6dc;     /* Dawn Pink */
+}
+
 @layer components {
-  .btn-primary {
-    @apply bg-planteka-600 hover:bg-planteka-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200;
-  }
-  
-  .btn-secondary {
-    @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-lg transition-colors duration-200;
-  }
-  
   .card {
     @apply bg-white rounded-lg shadow-md border border-gray-200 p-6;
   }
