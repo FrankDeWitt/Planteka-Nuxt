@@ -10,13 +10,13 @@
         <div class="card">
           <h2 class="text-xl font-semibold text-gray-800 mb-4">Counter Store</h2>
           <div class="flex items-center justify-center gap-4 mb-4">
-            <button @click="counter.decrement" class="btn-secondary">-</button>
+            <PltkButton icon="ic:sharp-minus" size="xl" color="secondary" variant="solid" @click="counter.decrement" />
             <span class="text-2xl font-mono font-bold text-planteka-700">{{ counter.count }}</span>
-            <button @click="counter.increment" class="btn-primary">+</button>
+            <PltkButton icon="ic:sharp-plus" size="xl" color="primary" variant="solid" @click="counter.increment" />
           </div>
           <p class="text-sm text-gray-600 text-center mb-3">Double: {{ counter.doubleCount }}</p>
           <div class="text-center">
-            <button @click="counter.reset" class="btn-secondary text-sm">Reset</button>
+            <PltkButton @click="counter.reset">Reset</PltkButton>
           </div>
         </div>
         
@@ -27,7 +27,7 @@
               <Icon name="heroicons:user-circle" class="w-16 h-16 mx-auto mb-2" />
               <p>Not logged in</p>
             </div>
-            <button @click="loginUser" class="btn-primary">Login as Demo User</button>
+            <PltkButton @click="loginUser">Login as Demo User</PltkButton>
           </div>
           <div v-else class="text-center space-y-4">
             <div class="text-planteka-600">
@@ -35,9 +35,9 @@
               <p class="font-semibold">Welcome, {{ user.userName }}!</p>
               <p class="text-sm text-gray-600">{{ user.userEmail }}</p>
             </div>
-            <button @click="user.logout" class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200">
+            <PltkButton color="error" @click="user.logout" >
               Logout
-            </button>
+            </PltkButton>
           </div>
         </div>
       </div>
