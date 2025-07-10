@@ -238,7 +238,22 @@
             </div>
 
             <!-- Card -->
-            <div class="flex space-x-8 aqui-card">
+            <div class="flex space-x-8">
+              <PlantExpertCard
+                name="Dr. Emily Green"
+                profile-image="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop&crop=face"
+                :experience="8"
+                :rating="4.8"
+                :reviews-count="50"
+                :returned-plant-parents="90"
+                description="I have been passionate about plants since childhood. My goal is to help you keep your plants healthy and thriving."
+                :specializations="['Succulents', 'Herbs', 'Indoor Plants']"
+                next-available="19 Jun"
+                :time-slots="['11:00', '11:30']"
+                :price-from="30.00"
+                @toggle-favorite="() => {}"
+                @book-now="() => {}"
+              />
             </div>
           </div>
         </div>

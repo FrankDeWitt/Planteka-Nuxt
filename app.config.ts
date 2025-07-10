@@ -46,6 +46,11 @@ export default defineAppConfig({
           class: 'bg-primary text-white hover:bg-primary-500 active:bg-primary-500 disabled:bg-primary aria-disabled:bg-primary'
         },
         {
+          color: 'primary',
+          variant: 'soft',
+          class: 'bg-white text-subtle shadow-md'
+        },
+        {
           color: 'secondary',
           variant: 'solid',
           class: 'bg-secondary text-dawnPink hover:bg-stromboli-500 active:bg-secondary-500 disabled:bg-primary aria-disabled:bg-primary'
