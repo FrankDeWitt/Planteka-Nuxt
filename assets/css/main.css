@@ -1,9 +1,38 @@
 @import "tailwindcss";
+@import "@nuxt/ui";
 @config "../../tailwind.config.js";
 
 @layer base {
   html {
     font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  :root {
+    --ui-primary: #838c68;
+    --ui-primary-50: #f6f7f4;
+    --ui-primary-100: #e9ebe4;
+    --ui-primary-200: #d3d8ca;
+    --ui-primary-300: #b5bda7;
+    --ui-primary-400: #838c68;
+    --ui-primary-500: #6b7455;
+    --ui-primary-600: #555c45;
+    --ui-primary-700: #464a3a;
+    --ui-primary-800: #3a3e32;
+    --ui-primary-900: #33352c;
+    --ui-primary-950: #1a1c15;
+    
+    --ui-secondary: #b34b23;
+    --ui-secondary-50: #fef6f3;
+    --ui-secondary-100: #fdeae4;
+    --ui-secondary-200: #fad1c3;
+    --ui-secondary-300: #f5b194;
+    --ui-secondary-400: #b34b23;
+    --ui-secondary-500: #a03d1c;
+    --ui-secondary-600: #8a3218;
+    --ui-secondary-700: #722916;
+    --ui-secondary-800: #5e2316;
+    --ui-secondary-900: #4f2017;
+    --ui-secondary-950: #2b0e08;
   }
 }
 
