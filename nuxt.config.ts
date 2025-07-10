@@ -4,7 +4,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
-    '@nuxt/content',
     '@nuxt/eslint',
     '@nuxt/fonts',
     '@nuxt/icon',
@@ -13,11 +12,16 @@ export default defineNuxtConfig({
     '@nuxt/test-utils',
     '@nuxt/ui',
     '@pinia/nuxt',
+    '@pinia/colada-nuxt',
     'pinia-plugin-persistedstate/nuxt',
-    '@vueuse/nuxt'
+    '@vueuse/nuxt',
   ],
 
   css: ['~/assets/css/main.css'],
+
+  ui: {
+    prefix: 'Pltk',
+  },
 
   postcss: {
     plugins: {
