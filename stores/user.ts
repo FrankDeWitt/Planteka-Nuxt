@@ -15,6 +15,15 @@ export const useUserStore = defineStore('user', () => {
     user.value = userData
     isLoggedIn.value = true
   }
+
+  const simpleLogin = (email: string, password: string) => {
+    const userData: User = {
+      id: '1',
+      name: 'User',
+      email: email
+    }
+    login(userData)
+  }
   
   const logout = () => {
     user.value = null
@@ -33,6 +42,7 @@ export const useUserStore = defineStore('user', () => {
     userName,
     userEmail,
     login,
+    simpleLogin,
     logout,
     updateUser
   }
