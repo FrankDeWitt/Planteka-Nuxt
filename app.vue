@@ -1,6 +1,10 @@
 <template>
   <PltkApp>
     <NuxtRouteAnnouncer />
-    <NuxtPage />
+    <NuxtLoadingIndicator />
+
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </PltkApp>
 </template>
