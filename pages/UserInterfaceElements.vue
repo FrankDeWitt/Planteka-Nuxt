@@ -1,3 +1,12 @@
+
+<script setup lang="ts">
+// Page meta
+definePageMeta({
+  title: 'Buttons - Planteka UI',
+  middleware: 'auth'
+})
+</script>
+
 <template>
   <div class="min-h-screen bg-gray-50 p-8">
     <div class="max-w-7xl mx-auto">
@@ -261,10 +270,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-// Page meta
-definePageMeta({
-  title: 'Buttons - Planteka UI'
-})
-</script>

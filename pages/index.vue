@@ -46,6 +46,10 @@
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+  middleware: 'auth'
+})
+
 const counter = useCounterStore()
 const user = useUserStore()
 
