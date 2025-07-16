@@ -1,16 +1,24 @@
 <script setup lang="ts">
+definePageMeta({
+  middleware: 'guest'
+})
+
 const email = ref('')
 const password = ref('')
+const userStore = useUserStore()
 
 const handleLogin = async () => {
-  console.log('Login attempt:', { email: email.value, password: password.value })
+  if (email.value && password.value) {
+    userStore.simpleLogin(email.value, password.value)
+    await navigateTo('/')
+  }
 }
 </script>
 
 <template>
   <div class="min-h-screen flex">
     <!-- Left side - Login Form -->
-    <div class="w-1/2 flex items-center justify-center px-4 sm:px-6 lg:px-20 xl:px-24 bg-dawnPink">
+    <div class="w-full lg:w-1/2 flex items-center justify-center px-4 sm:px-6 lg:px-20 xl:px-24 bg-dawnPink">
       <NuxtImg src="/images/planteka-logo.svg" class="absolute top-10 left-8 w-32"/>
       <div class="max-w-xs w-full space-y-8">
         <!-- Language switcher -->
@@ -146,7 +154,7 @@ const handleLogin = async () => {
     </div>
 
     <!-- Right side - Background Image -->
-    <div class="lg:block relative w-0 w-1/2 login-bg">
+    <div class="hidden lg:block relative w-0 lg:w-1/2 login-bg">
     </div>
   </div>
 </template>
